@@ -3,7 +3,7 @@ on:
     branches:
       - 'develop'
 jobs:
-  build-and-push-docker-image:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,5 +19,6 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: nowgnas/bb:config
