@@ -24,7 +24,7 @@ management:
         include:
           - "refresh"
           - "bus-refresh"
-          - "health
+          - "health"
 encrypt:
   key: ${secret}
 logging:
