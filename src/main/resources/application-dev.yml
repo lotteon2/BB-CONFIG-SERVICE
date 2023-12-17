@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          default-broker-port: kafka:9093
+          brokers: kafka:9093
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+logging: 
+  level: 
+    root: INFO
