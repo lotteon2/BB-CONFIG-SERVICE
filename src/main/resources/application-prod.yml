@@ -14,3 +14,6 @@ eureka:
       defaultZone: http://discovery-service:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${server.port}
+logging:
+  level:
+    root: ERROR
